@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './counter.scss';
 
-let counter = 0;
-
 class Counter extends Component {
   constructor(props) {
     super(props);
@@ -16,8 +14,6 @@ class Counter extends Component {
       this.setState({
         counter: this.state.counter + 1,
       });
-      counter += 1;
-      console.log(counter);
     }, props.interval);
   }
 
