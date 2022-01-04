@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-const RED = '#f00';
-const GREEN = '#0f0';
-const BLUE = '#00f';
-
 class Toggler extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +8,7 @@ class Toggler extends Component {
       condition: 'Off',
     };
   }
+
   setCondition = e => {
     this.setState({
       condition: e.target.textContent === 'Off' ? 'On' : 'Off',
