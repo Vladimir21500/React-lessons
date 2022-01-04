@@ -4,7 +4,7 @@ const RED = '#f00';
 const GREEN = '#0f0';
 const BLUE = '#00f';
 
-class Colors extends Component {
+class Toggler extends Component {
   constructor(props) {
     super(props);
 
@@ -27,4 +27,4 @@ class Colors extends Component {
   }
 }
 
-export default Colors;
+export default Toggler;
