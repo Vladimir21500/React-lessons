@@ -9,9 +9,15 @@ class ColorPicker extends Component {
     };
   }
 
-  setColorTitle = e => {
+  setTitle(color) {
     this.setState({
-      buttonColor: e.target.style.backgroundColor,
+      buttonColor: color,
+    });
+  }
+
+  clearTitle = () => {
+    this.setState({
+      buttonColor: '',
     });
   };
 
@@ -21,15 +27,18 @@ class ColorPicker extends Component {
         <div className="picker__title">{this.state.buttonColor}</div>
         <div>
           <button
-            onMouseOver={this.setColorTitle}
             className="picker__button picker__button_coral"
+            onMouseEnter={() => this.setTitle('Coral')}
+            onMouseLeave={this.clearTitle}
           ></button>
           <button
-            onMouseOver={this.setColorTitle}
+            onMouseEnter={() => this.setTitle('Aqua')}
+            onMouseLeave={this.clearTitle}
             className="picker__button picker__button_aqua"
           ></button>
           <button
-            onMouseOver={this.setColorTitle}
+            onMouseEnter={() => this.setTitle('Bisque')}
+            onMouseLeave={this.clearTitle}
             className="picker__button picker__button_bisque"
           ></button>
         </div>
