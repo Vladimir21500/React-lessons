@@ -10,9 +10,8 @@ class ColorPicker extends Component {
   }
 
   setColorTitle = e => {
-    console.log(e.currentTarget.style.background);
     this.setState({
-      buttonColor: e.currentTarget.style.background,
+      buttonColor: e.target.style.backgroundColor,
     });
   };
 
