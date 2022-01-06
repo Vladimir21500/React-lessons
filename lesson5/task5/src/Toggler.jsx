@@ -5,20 +5,20 @@ class Toggler extends Component {
     super(props);
 
     this.state = {
-      condition: 'Off',
+      active: false,
     };
   }
 
   setCondition = e => {
     this.setState({
-      condition: e.target.textContent === 'Off' ? 'On' : 'Off',
+      active: !this.state.active,
     });
   };
 
   render() {
     return (
       <div onClick={this.setCondition} className="toggler">
-        {this.state.condition}
+        {this.state.active ? 'On' : 'Off'}
       </div>
     );
   }
