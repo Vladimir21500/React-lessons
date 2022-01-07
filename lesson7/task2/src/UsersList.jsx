@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import User from './User.jsx';
 
-class UserList extends Component {
+class UsersList extends Component {
   constructor(props) {
     super(props);
 
@@ -43,4 +43,4 @@ class UserList extends Component {
   }
 }
 
-export default UserList;
+export default UsersList;
