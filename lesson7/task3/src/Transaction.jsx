@@ -1,6 +1,6 @@
 import React from 'react';
 
-const transaction = ({ amount, day, hour, from, to, rate }) => {
+const Transaction = ({ amount, day, hour, from, to, rate }) => {
   return (
     <li className="transaction">
       <span className="transaction__date">{day}</span>
@@ -12,4 +12,4 @@ const transaction = ({ amount, day, hour, from, to, rate }) => {
   );
 };
 
-export default transaction;
+export default Transaction;
