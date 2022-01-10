@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import moment from 'moment';
 import './index.scss';
 import TransactionsList from './TransactionsList.jsx';
 
@@ -31,14 +30,6 @@ const transactions = [
   },
 ];
 
-const formatedTransactions = transactions.map(transaction => {
-  return {
-    ...transaction,
-    day: moment(new Date(transaction.time)).format('DD MMM'),
-    hour: moment(new Date(transaction.time)).format('hh:mm'),
-  };
-});
-
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<TransactionsList transactions={formatedTransactions} />, rootElement);
+ReactDOM.render(<TransactionsList transactions={transactions} />, rootElement);
