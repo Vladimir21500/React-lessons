@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class ConnectionStatus extends Component {
   state = {
-    online: true,
+    status: 'online',
   };
 
   componentDidMount() {
@@ -17,12 +17,12 @@ class ConnectionStatus extends Component {
 
   onChangeStatus = () => {
     this.setState({
-      online: !this.state.online,
+      status: this.state.status === 'online' ? 'offline' : 'online',
     });
   };
 
   render() {
-    return this.state.online ? (
+    return this.state.status === 'online' ? (
       <div className="status">online</div>
     ) : (
       <div className="status status_offline">offline</div>
