@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Clock extends Component {
   constructor(props) {
@@ -20,12 +21,18 @@ class Clock extends Component {
     clearInterval(this.interval);
   }
 
+  getTimeWithOffset() {
+    const currentTime = new Date();
+    const utcOffset = currentTime.getTimezoneOffset() / 60;
+    return new Date(currentTime.setHours(currentTime.getHours() + this.props.offset + utcOffset));
+  }
+
   render() {
     return (
       <>
         <div className="clock">
-          <div className="clock__location">New York</div>
-          <div className="clock__time">7:00:51 AM</div>
+          <div className="clock__location">{this.props.location}</div>
+          <div className="clock__time">{moment(this.getTimeWithOffset()).format('LTS')}</div>
         </div>
       </>
     );
