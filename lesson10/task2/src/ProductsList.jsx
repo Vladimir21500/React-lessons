@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const ProductsList = props => {
   const total = props.cartItems.reduce((acc, item) => acc + item.price, 0);
