@@ -28,6 +28,10 @@ body {
   text-align: center;
   border: none;
 }
+.result__btn-href {
+  text-decoration: none;
+  color: #000;
+}
 .result__message {
   padding: 5px;
   width: 100%;
