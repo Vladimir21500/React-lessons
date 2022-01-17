@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.result {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.result_hide {
+  display: none;
+}
+
+.result__btn {
+  padding: 0;
+  width: 100%;
+  line-height: 32px;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: coral;
+  text-align: center;
+  border: none;
+}
+.result__message {
+  padding: 5px;
+  width: 100%;
+  font-size: 32px;
+  background-color: coral;
+  color: white;
+}
+.result__warn {
+  width: 100%;
+  margin: 0;
+  background-color: red;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0 0 5px #abc, 0 0 7px #abc;
+}
+
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff,
+      0px 0px 50px #fff, 0px 0px 50px red, 0px 0px 150px red, 0px 10px 100px red, 0px 10px 100px red,
+      0px 10px 100px red, 0px 10px 100px red, 0px -10px 100px red, 0px -10px 100px red;
+  }
+}
