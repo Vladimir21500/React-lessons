@@ -22,6 +22,7 @@ class Page extends Component {
 
   render() {
     const { userData } = this.state;
+    document.title = userData.firstName;
     return (
       <div className="page">
         <h1 className="title">{`Hello, ${userData.firstName}`}</h1>
