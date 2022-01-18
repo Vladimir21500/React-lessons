@@ -22,10 +22,10 @@ class App extends Component {
     return (
       <div className="app">
         <button className="btn" onClick={this.showDialog}>
-          Show
+          Show dialog
         </button>
-        <Dialog isOpen={this.state.isOpen} onClose={this.hideDialog} title="some title">
-          <p>Some text</p>
+        <Dialog isOpen={this.state.isOpen} onClose={this.hideDialog} title="Recommendation">
+          <p>Use immutable array methods to work with data. It will help to avoid bugs</p>
         </Dialog>
       </div>
     );
