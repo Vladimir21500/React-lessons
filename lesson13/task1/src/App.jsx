@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home.jsx';
 import Products from './Products.jsx';
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/products">
             <Products />
           </Route>
-          <Route path="contacts">
+          <Route path="/contacts">
             <Contacts />
           </Route>
           <Route path="*">
