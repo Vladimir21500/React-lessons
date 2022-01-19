@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import Home from './Home.jsx';
+import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Products from './Products.jsx';
+import Home from './Home.jsx';
 
 const App = () => {
   return (
     <div className="page">
       <BrowserRouter>
-        <Routes>
-          <Route>
-            <ul className="navigation">
-              <li className="navigation__item">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="navigation__item">
-                <Link to="/">Products</Link>
-              </li>
-            </ul>
-          </Route>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-        </Routes>
+        <ul className="navigation">
+          <li className="navigation__item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="navigation__item">
+            <Link to="/products">Products</Link>
+          </li>
+        </ul>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/products" component={Products} />
       </BrowserRouter>
     </div>
   );
