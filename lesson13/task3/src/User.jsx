@@ -7,7 +7,7 @@ class User extends Component {
     user: {},
   };
 
-  fetchUser = id => {
+  fetchUserInfo = id => {
     fetch(`${baseUrl}/${id}`)
       .then(response => response.json())
       .then(user => user)
@@ -18,18 +18,10 @@ class User extends Component {
       });
   };
 
-  componentDidMount() {
-    this.fetchUser(this.props.match.params.userId);
-  }
-
-  /* shouldComponentUpdate(nextProps) {
-    console.log(nextProps);
-    console.log(this.props);
-    return nextProps.match.params.userId !== this.props.match.params.userId;
-  } */
-
-  componentDidUpdate() {
-    this.fetchUser(this.props.match.params.userId);
+  componentDidUpdate(prevProp) {
+    if (this.props.match.params.userId !== prevProp.match.params.userId) {
+      this.fetchUserInfo(this.props.match.params.userId);
+    }
   }
 
   render() {
